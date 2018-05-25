@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent  {
-
+  // still working on fixing this issue
   constructor(public afAuth: AngularFireAuth , public router: Router) { }
   login() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then((sucess) => {
