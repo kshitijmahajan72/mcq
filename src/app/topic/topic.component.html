@@ -1,11 +1,11 @@
-<h2>CSV data</h2>
+<!-- <h2>CSV data</h2>
 <div>
   <button class="btn btn1 btn2" (click)="readCsvData()">Read Csv Data</button>
 </div>
-<br/><br/>
-
-<div>
-  <table border="1" class="demoTable">
+<br/><br/> -->
+<h3 class="font">Results of the Previous Test</h3>
+<div class="container container-fluid height">
+  <table class="demoTable table table-striped">
     <tr *ngFor = "let x of csvData">
       <td *ngFor = "let y of x ">{{ y }}</td>
     </tr>

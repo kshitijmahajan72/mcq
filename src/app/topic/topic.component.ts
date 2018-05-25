@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Http , Response } from '@angular/http';
 
 @Component({
@@ -6,13 +6,13 @@ import { Http , Response } from '@angular/http';
   templateUrl: './topic.component.html',
   styleUrls: ['./topic.component.css']
 })
-export class TopicComponent {
+export class TopicComponent implements OnInit {
 
   csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTeyaTuS8UmGSxOLxmJAbamffHh2WtseAhrLQW8s9CBa2ZLIQQbWy7vjpX8Ipc_yQ1L7o-dsU0Awj74/pub?output=csv';
   csvData: any [] = [];
   constructor(private http: Http) { }
 
-    readCsvData() {
+    ngOnInit() {
       this.http.get(this.csvUrl)
       .subscribe(
         data => this.extractData(data),

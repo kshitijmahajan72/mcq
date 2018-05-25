@@ -11,9 +11,14 @@ import {Router} from '@angular/router';
 export class LoginComponent  {
 
   constructor(public afAuth: AngularFireAuth , public router: Router) { }
-  // login() {
-  //   this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then((sucess) => {
-  //     this.router.navigate(['/topic']);
-  // });
+  login() {
+    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then((sucess) => {
+      this.router.navigate(['/option']);
+  });
+}
+
+moving() {
+  return this.router.navigateByUrl('/form');
+}
 }
 

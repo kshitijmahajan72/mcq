@@ -9,10 +9,10 @@ import {DataService} from '../data.service';
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit , OnDestroy {
-
+  finalVal: any;
+  finaltest: string;
   constructor( public sanitizer: DomSanitizer, public dataservice: DataService) { }
-    finalVal: any;
-    finaltest: string;
+    
     ngOnInit() {
          this.finalVal = this.dataservice.link ;
          this.finaltest = this.dataservice.test;
@@ -22,10 +22,11 @@ export class StudentComponent implements OnInit , OnDestroy {
     }
   show() {
     console.log(this.finaltest);
+    console.log(this.finalVal);
+    return this.finalVal;
     // this.finalVal = this.forms.newVal;
     // return this.sanitizer.bypassSecurityTrustUrl(this.link);
   //     return console.log('hi there');
-    return console.log();
   }
 
 }

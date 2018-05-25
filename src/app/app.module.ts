@@ -16,6 +16,8 @@ import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
 import { StudentComponent } from './student/student.component';
 import {DataService} from './data.service';
+import { TeacherComponent } from './teacher/teacher.component';
+import { OptionComponent } from './option/option.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import {DataService} from './data.service';
     TopicComponent,
     FormComponent,
     StudentComponent,
+    TeacherComponent,
+    OptionComponent,
  
   ],
   imports: [

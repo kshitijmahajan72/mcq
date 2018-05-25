@@ -1,25 +1,14 @@
-<!-- <div class="container-fluid">
-  <div class="row"> -->
-    <!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdUELS2vegt6jKt6LQ5LAcy1rUikVQXoyV0aZvkyB0WNUqChw/viewform?embedded=true" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe> -->
-    <!-- <a href="https://docs.google.com/forms/d/1VAkZYnY-JvynizM5wzi40kPbSm0gic6uj45zCB9iFzI/edit">click me</a>
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name"> div class="form-group">
-      <label for="alterEgo">Alter Ego</label>
-      <input type="text" class="form-control" id="alterEgo" [(ngModel)]="model.alterEgo" name="alterEgo">
+<div class="container-fluid">
+  <h1 class="font">Welcome Student</h1>
+  <div class="row height" >
+    <div class="col-sm"></div>
+    <div class="col-sm">
+        <h3 class="text-center"> Ready to take the test?!</h3> 
+      <input id="str" [(ngModel)]="str" class="form-control" placeholder="paste the link provided by your prof"/>
+    
+      <button (click)="sendValues()" class="btn btn-primary" >Lets Go!</button>
+     
     </div>
-
-    <div class="form-group">
-      <label for="power">Hero Power</label>
-      <select class="form-control" id="power" required [(ngModel)]="model.power" name="power">
-        <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
-      </select>
-    </div>
+    <div class="col-sm"></div>
   </div>
-</div> -->
-<input type="text" placeholder="enter link" [(ngModel)]="link">
-{{name}}
-{{new}}
-
-<input id="str" [(ngModel)]="str"/>
-<button (click)="sendValues()">Send</button>
+</div>
